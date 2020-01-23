@@ -5,6 +5,9 @@
 // Example:
 // cinema = iceman
 
+// Assume the string contains only lowercase alphabets.
+// Time Complexity - O(n)
+
 function validAnagram(str1, str2) {
     // first I will compare the length of the strings and if not equal return false
     if (str1.length !== str2.length) {
@@ -30,6 +33,7 @@ function validAnagram(str1, str2) {
             return false;
         } if (str1Frequency[key] !== str2Frequency[key]) {
             console.log('no');
+            return false;
         }
     }
     // if all false conditions pass, return true
